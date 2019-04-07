@@ -8,7 +8,8 @@ class Scraper
     doc.css("div.col-xs-12.col-sm-6.roster").each do |player|
 
       player_name = player.css("h3.nameplate").text
-       binding.pry
+      Player.new(player_name)
+
     end
 
   end

@@ -1,11 +1,13 @@
 class Player
 attr_accessor :player_name
 
-@@all
+@@all = []
 
  def initialize(player_name)
   @player_name = player_name
+
   @@all << self
+
  end
 
  def self.all
