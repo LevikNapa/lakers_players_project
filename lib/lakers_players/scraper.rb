@@ -6,9 +6,9 @@ class Scraper
     doc = Nokogiri::HTML(html)
        # binding.pry
     doc.css("div.col-xs-12.col-sm-6.roster").each do |player|
-      binding.pry
-      # player_name = player.css("").text
 
+      player_name = player.css("h3.nameplate").text
+       binding.pry
     end
 
   end
