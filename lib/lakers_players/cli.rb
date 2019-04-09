@@ -10,7 +10,7 @@ class CLI
     if input == "enter"
     Scraper.new.page_scraper
     list_players
-    select_player
+    choose_player
     end
   end
 
@@ -20,12 +20,17 @@ class CLI
     end
   end
 
-  def select_player
+  def choose_player
     puts "\nType a players number to see more info on him:"
     input = gets.strip.to_i
     if input.between?(1,17)
-      number = Player.all[input-1]
-      display_player_info(number)
+      player_selection = Player.all[input-1]
+      Scraper.info_scraper(player_selection)
+    else
+      "\nPlease enter a valid input"
+      choose_player
+    end
   end
+
 
 end
