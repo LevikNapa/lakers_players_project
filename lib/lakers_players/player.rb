@@ -1,5 +1,5 @@
 class Player
-attr_accessor :player_name, :links
+attr_accessor :player_name, :links, :info, :birthday, :drafted
 attr_reader :player_info
 
 @@all = []

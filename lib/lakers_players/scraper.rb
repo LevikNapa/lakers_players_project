@@ -16,9 +16,18 @@ class Scraper
 
     html = open(player_selection.links)
     webpage = Nokogiri::HTML(html)
+    items = webpage.css("div.bio-info")
     # binding.pry
+    items.each do |item|
+
+    info = Info.new
+    info.birthday= item.css("h3")[2].text
+    info.drafted= items.css("h3")[4].text
+    player_selection.player_info << info
+    binding.pry
 
 
+   end
 
   end
 
