@@ -24,7 +24,7 @@ class Scraper
     info.birthday= item.css("h3")[2].text
     info.drafted= items.css("h3")[4].text
     player_selection.player_info << info
-    binding.pry
+
 
 
    end

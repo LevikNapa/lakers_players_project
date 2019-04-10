@@ -9,6 +9,7 @@ require_relative './lakers_players/info'
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
 
 
 module LakersPlayers

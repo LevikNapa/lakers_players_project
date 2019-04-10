@@ -14,6 +14,6 @@ attr_reader :player_info
 
  def self.all
   @@all
- end
+end 
 
 end
