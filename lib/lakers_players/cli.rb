@@ -35,17 +35,19 @@ class CLI
 
   def display_info(player_selection)
     Scraper.info_scraper(player_selection)
-    # puts "Here's some info on #{player_name}:\n"
-    player_selection.player_info.each.with_index(1) do |info, idx|
-      puts "#{idx}. #{player_selection.birthday}. #{player_selection.drafted}"
+      puts "Here's some info on #{player_selection.player_name}:\n"
+      player_selection.player_info.each.with_index(1) do |info, idx|
+      puts "#{info.birthday}."
+      puts "#{info.drafted}."
+
     end
    second_menu
   end
 
   def second_menu
-    puts "Would you like to look at another player? Type 'P'"
+    puts "\nWould you like to look at another player? Type 'P'"
     puts "Would you like to go to the start? Type 'S'"
-    puts "Would you like to exit? Type 'Exit'"
+    puts "Would you like to exit? Type 'exit'"
     input = gets.strip.upcase
     if input == "P"
       list_players
