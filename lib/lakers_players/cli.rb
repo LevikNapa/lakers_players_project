@@ -1,7 +1,5 @@
 class CLI
 
-attr_accessor :counter
-
   def start
     puts "Welcome to Lakers players!".red
     menu
