@@ -10,9 +10,10 @@ class CLI
     input = gets.strip
     case input
       when "enter"
-    Scraper.new.page_scraper
+    Scraper.page_scraper
     list_players
     choose_player
+
       when "exit"
     puts "Goodbye!"
       else
@@ -23,7 +24,7 @@ class CLI
 
   def list_players
     Player.all.each.with_index(1) do |player, idx|
-      puts "#{idx}. #{player.player_name}".blue
+      puts "#{idx}. #{player.player_name}".magenta
     end
   end
 
@@ -46,6 +47,7 @@ class CLI
       player_selection.player_info.each do |info|
       puts "#{player_selection.birthday}.".green
       puts "#{player_selection.drafted}.".green
+      puts "Position: #{player_selection.position}.".green
     end
    second_menu
   end
