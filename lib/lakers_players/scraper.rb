@@ -1,5 +1,5 @@
 class Scraper
-  def page_scraper
+  def self.page_scraper
 
     html = open("https://www.nba.com/lakers/roster/player-pages")
     doc = Nokogiri::HTML(html)
