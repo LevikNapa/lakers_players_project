@@ -1,4 +1,7 @@
 class CLI
+
+attr_accessor :counter
+
   def start
     puts "Welcome to Lakers players!".red
     menu
@@ -7,11 +10,17 @@ class CLI
   def menu
     puts "\nPlease type 'enter' to see a list of the lakers players".yellow
     input = gets.strip
-    if input == "enter"
+    case input
+      when "enter"
     Scraper.new.page_scraper
     list_players
     choose_player
-    end
+      when "exit"
+    puts "Goodbye!"
+      else
+    puts "Sorry! I didn't understand that input"
+    menu
+   end
   end
 
   def list_players
@@ -44,19 +53,19 @@ class CLI
   end
 
   def second_menu
-    puts "\nWould you like to look at another player? Type 'P'".yellow
-    puts "Would you like to go to the start? Type 'S'".yellow
+    puts "\nWould you like to look at another player? Type 'player'".yellow
+    puts "Would you like to go to the start? Type 'start'".yellow
     puts "Would you like to exit? Type 'exit'".yellow
-    input = gets.strip.upcase
-    if input == "P"
+    input = gets.strip
+    if input == "player"
       list_players
       choose_player
-    elsif input == "S"
+    elsif input == "start"
       menu
-    elsif input == "Exit"
-      puts "Goodbye!".aqua
+    elsif input == "exit"
+      puts "Goodbye!".red
     else
-      puts "Sorry I did't understand that input".aqua
+      puts "Sorry I didn't understand that input".red
       second_menu
     end
   end
