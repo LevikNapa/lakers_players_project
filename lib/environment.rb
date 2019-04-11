@@ -4,7 +4,7 @@ require_relative './lakers_players/version'
 require_relative './lakers_players/cli'
 require_relative './lakers_players/scraper'
 require_relative './lakers_players/player'
-require_relative './lakers_players/info'
+
 
 require 'pry'
 require 'nokogiri'

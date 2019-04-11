@@ -36,10 +36,9 @@ class CLI
   def display_info(player_selection)
     Scraper.info_scraper(player_selection)
       puts "Here's some info on #{player_selection.player_name}:\n".yellow
-      player_selection.player_info.each.with_index(1) do |info, idx|
-      puts "#{info.birthday}.".green
-      puts "#{info.drafted}.".green
-
+      player_selection.player_info.each do |info|
+      puts "#{player_selection.birthday}.".green
+      puts "#{player_selection.drafted}.".green
     end
    second_menu
   end

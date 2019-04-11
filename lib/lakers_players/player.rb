@@ -1,5 +1,5 @@
 class Player
-attr_accessor :player_name, :links, :info, :birthday, :drafted
+attr_accessor :player_name, :links, :birthday, :drafted
 attr_reader :player_info
 
 @@all = []
@@ -7,6 +7,9 @@ attr_reader :player_info
  def initialize(player_name)
   @player_name = player_name
   @player_info = []
+  @birthday = birthday
+
+
 
   @@all << self
 
@@ -14,6 +17,6 @@ attr_reader :player_info
 
  def self.all
   @@all
-end 
+end
 
 end
