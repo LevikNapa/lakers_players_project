@@ -36,7 +36,7 @@ class CLI
       display_info(player_selection)
 
     else
-      "\nPlease enter a valid input"
+      "Please enter a valid input"
       choose_player
     end
   end
@@ -61,7 +61,8 @@ class CLI
       list_players
       choose_player
     elsif input == "start"
-      menu
+      Player.clear
+      start
     elsif input == "exit"
       puts "Goodbye!".red
     else

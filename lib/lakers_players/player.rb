@@ -7,9 +7,6 @@ attr_reader :player_info
  def initialize(player_name)
   @player_name = player_name
   @player_info = []
-  @birthday = [] 
-
-
 
   @@all << self
 
@@ -17,6 +14,10 @@ attr_reader :player_info
 
  def self.all
   @@all
+end
+
+def self.clear
+  all.clear
 end
 
 end

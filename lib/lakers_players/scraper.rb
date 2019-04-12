@@ -18,12 +18,10 @@ class Scraper
     webpage = Nokogiri::HTML(html)
     items = webpage.css("div.bio-info")
     items.each do |item|
-      # binding.pry
     player_selection.position= webpage.css("div.player-info h3").text
     player_selection.birthday= item.css("h3")[2].text
     player_selection.drafted= items.css("h3")[4].text
     player_selection.player_info << player_selection.birthday && player_selection.drafted && player_selection.position
-    # player_selection.player_info.flatten
     player_selection
 
    end

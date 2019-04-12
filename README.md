@@ -1,6 +1,6 @@
 # LakersPlayers
 
-   
+
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To start the program just run ruby ./bin/laker-players. You should see a prompt to hit 'enter' to see a list of players. Once the players are listed, you are again prompted to enter a number to see a specific players information. After that information is displayed, there will be a list of options to either see another players info, go to the start of the program, or hit exit to end the program. Thats pretty much the program, I hope you enjoy!
 
 ## Development
 
